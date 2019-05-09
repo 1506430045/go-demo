@@ -27,6 +27,8 @@ func initRouter() *gin.Engine {
 
 	router.GET("/user/:name", GetNameApi)
 
+	router.GET("/employee/:id", GetEmployeeApi)
+
 	router.GET("/test", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "hello.html", gin.H{
 			"title": "Main website",
